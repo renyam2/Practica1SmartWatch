@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitLife — Smart TV</title>
+  <title>FitLife &#x2014; Smart TV</title>
   <link rel="stylesheet" href="css/tv.css">
 </head>
 <body>
   <header class="page-header">
-    <h1>FitLife · Prototipo Smart TV</h1>
+    <h1>FitLife &#xB7; Prototipo Smart TV</h1>
     <p>
       Navega con las flechas (o el control remoto en pantalla) y selecciona con
       <kbd>Enter</kbd> / <kbd>Aceptar</kbd>.
-      <a href="../index.html">← Versión Smartwatch</a>
+      <a href="../index.html">&#x2190; Versi&#xF3;n Smartwatch</a>
     </p>
   </header>
 
   <main class="tv-stage">
-    <!-- Marco físico de la TV -->
+    <!-- Marco f&#xED;sico de la TV -->
     <div class="tv-body">
       <div class="tv-screen" id="tv-screen">
 
@@ -25,35 +25,35 @@
         <section class="tv-screen-panel active" id="panel-dashboard">
           <div class="dash-header">
             <div class="user">
-              <span class="avatar">🧑</span>
+              <span class="avatar">&#x1F9D1;</span>
               <div>
-                <h2>María González</h2>
-                <small>Resumen diario · <span id="tv-date"></span></small>
+                <h2>Mar&#xED;a Gonz&#xE1;lez</h2>
+                <small>Resumen diario &#xB7; <span id="tv-date"></span></small>
               </div>
             </div>
             <div class="dash-goal-pill" tabindex="0" data-nav="goals">
-              Objetivo del día: <strong id="dash-goal-pct">0%</strong>
+              Objetivo del d&#xED;a: <strong id="dash-goal-pct">0%</strong>
             </div>
           </div>
 
           <div class="dash-grid">
             <div class="card" tabindex="0" data-nav="stats">
-              <span class="card-icon">👣</span>
+              <span class="card-icon">&#x1F463;</span>
               <span class="card-value" id="dash-steps">0</span>
               <span class="card-label">Pasos</span>
             </div>
             <div class="card" tabindex="0" data-nav="stats">
-              <span class="card-icon">🔥</span>
+              <span class="card-icon">&#x1F525;</span>
               <span class="card-value" id="dash-cal">0</span>
-              <span class="card-label">Calorías (kcal)</span>
+              <span class="card-label">Calor&#xED;as (kcal)</span>
             </div>
             <div class="card" tabindex="0" data-nav="stats">
-              <span class="card-icon">❤️</span>
+              <span class="card-icon">&#x2764;&#xFE0F;</span>
               <span class="card-value" id="dash-hr">0</span>
               <span class="card-label">Frecuencia cardiaca (bpm)</span>
             </div>
             <div class="card" tabindex="0" data-nav="goals">
-              <span class="card-icon">🎯</span>
+              <span class="card-icon">&#x1F3AF;</span>
               <span class="card-value" id="dash-goal">10,000</span>
               <span class="card-label">Objetivo de pasos</span>
             </div>
@@ -65,16 +65,16 @@
           </div>
         </section>
 
-        <!-- ============ PANTALLA 2: ESTADÍSTICAS ============ -->
+        <!-- ============ PANTALLA 2: ESTAD&#xCD;STICAS ============ -->
         <section class="tv-screen-panel" id="panel-stats">
-          <h2 class="panel-title">Estadísticas · últimos 7 días</h2>
+          <h2 class="panel-title">Estad&#xED;sticas &#xB7; &#xFA;ltimos 7 d&#xED;as</h2>
           <div class="charts">
             <div class="chart" tabindex="0">
-              <h3>Pasos por día</h3>
+              <h3>Pasos por d&#xED;a</h3>
               <div class="chart-bars" id="chart-steps"></div>
             </div>
             <div class="chart" tabindex="0">
-              <h3>Calorías por día</h3>
+              <h3>Calor&#xED;as por d&#xED;a</h3>
               <div class="chart-bars" id="chart-cal"></div>
             </div>
             <div class="chart" tabindex="0">
@@ -90,20 +90,20 @@
           <p class="panel-sub">Selecciona una actividad con el control remoto</p>
           <div class="activity-grid" id="activity-grid">
             <button class="tv-activity" data-activity="Caminar">
-              <span class="act-icon">🚶</span><span>Caminar</span>
+              <span class="act-icon">&#x1F6B6;</span><span>Caminar</span>
             </button>
             <button class="tv-activity" data-activity="Correr">
-              <span class="act-icon">🏃</span><span>Correr</span>
+              <span class="act-icon">&#x1F3C3;</span><span>Correr</span>
             </button>
             <button class="tv-activity" data-activity="Bicicleta">
-              <span class="act-icon">🚴</span><span>Bicicleta</span>
+              <span class="act-icon">&#x1F6B4;</span><span>Bicicleta</span>
             </button>
             <button class="tv-activity" data-activity="Entrenamiento">
-              <span class="act-icon">🏋️</span><span>Entrenamiento</span>
+              <span class="act-icon">&#x1F3CB;&#xFE0F;</span><span>Entrenamiento</span>
             </button>
           </div>
           <div class="activity-selected" id="activity-selected">
-            Seleccionada: <strong id="activity-name">—</strong>
+            Seleccionada: <strong id="activity-name">&#x2014;</strong>
           </div>
         </section>
 
@@ -113,7 +113,7 @@
           <div class="history-layout">
             <ul class="history-list" id="history-list"></ul>
             <aside class="history-detail" id="history-detail">
-              <p class="detail-empty">Usa ↑ ↓ para elegir una actividad y <kbd>Enter</kbd> para ver el detalle.</p>
+              <p class="detail-empty">Usa &#x2191; &#x2193; para elegir una actividad y <kbd>Enter</kbd> para ver el detalle.</p>
             </aside>
           </div>
         </section>
@@ -141,18 +141,18 @@
             <div class="goal-block" tabindex="0">
               <h3>Objetivos alcanzados</h3>
               <ul class="achieved-list">
-                <li>🏅 Meta de pasos completada 5 veces este mes</li>
-                <li>🔥 300 kcal quemadas en una sesión</li>
-                <li>⏱️ 60 min de ejercicio continuo</li>
+                <li>&#x1F3C5; Meta de pasos completada 5 veces este mes</li>
+                <li>&#x1F525; 300 kcal quemadas en una sesi&#xF3;n</li>
+                <li>&#x23F1;&#xFE0F; 60 min de ejercicio continuo</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <!-- Barra de navegación inferior (secciones) -->
+        <!-- Barra de navegaci&#xF3;n inferior (secciones) -->
         <nav class="tv-tabbar" id="tabbar">
           <button data-panel="dashboard">Inicio</button>
-          <button data-panel="stats">Estadísticas</button>
+          <button data-panel="stats">Estad&#xED;sticas</button>
           <button data-panel="activities">Actividades</button>
           <button data-panel="history">Historial</button>
           <button data-panel="goals">Objetivos</button>
@@ -163,12 +163,12 @@
 
     <!-- Control remoto en pantalla -->
     <div class="remote" title="Control remoto">
-      <button class="r-btn r-up" data-dir="up">▲</button>
-      <button class="r-btn r-left" data-dir="left">◀</button>
+      <button class="r-btn r-up" data-dir="up">&#x25B2;</button>
+      <button class="r-btn r-left" data-dir="left">&#x25C0;</button>
       <button class="r-btn r-ok" data-dir="ok">OK</button>
-      <button class="r-btn r-right" data-dir="right">▶</button>
-      <button class="r-btn r-down" data-dir="down">▼</button>
-      <button class="r-btn r-back" data-dir="back">⌂ Inicio</button>
+      <button class="r-btn r-right" data-dir="right">&#x25B6;</button>
+      <button class="r-btn r-down" data-dir="down">&#x25BC;</button>
+      <button class="r-btn r-back" data-dir="back">&#x2302; Inicio</button>
     </div>
   </main>
 

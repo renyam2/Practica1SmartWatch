@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitLife — Smartwatch</title>
+  <title>FitLife &#x2014; Smartwatch</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="page-header">
-    <h1>FitLife · Prototipo Smartwatch</h1>
+    <h1>FitLife &#xB7; Prototipo Smartwatch</h1>
     <p>Desliza (o usa las flechas) para cambiar de pantalla. Pantalla actual:
       <span id="screen-name" class="screen-name">Inicio</span>
-      &nbsp;·&nbsp; <a href="tv/index.html">Versión Smart TV →</a>
+      &nbsp;&#xB7;&nbsp; <a href="tv/index.html">Versi&#xF3;n Smart TV &#x2192;</a>
     </p>
   </header>
 
   <main class="watch-stage">
-    <!-- Marco físico del smartwatch -->
+    <!-- Marco f&#xED;sico del smartwatch -->
     <div class="watch-body">
-      <div class="watch-crown" title="Corona (botón lateral)"></div>
+      <div class="watch-crown" title="Corona (bot&#xF3;n lateral)"></div>
       <div class="watch-screen" id="watch-screen">
 
         <!-- ============ PANTALLA 1: INICIO ============ -->
@@ -38,29 +38,29 @@
           </div>
           <div class="metrics-row">
             <div class="metric">
-              <span class="metric-icon">👣</span>
+              <span class="metric-icon">&#x1F463;</span>
               <span class="metric-value" id="home-steps">0</span>
               <span class="metric-label">pasos</span>
             </div>
             <div class="metric">
-              <span class="metric-icon">❤️</span>
+              <span class="metric-icon">&#x2764;&#xFE0F;</span>
               <span class="metric-value" id="home-hr">0</span>
               <span class="metric-label">bpm</span>
             </div>
             <div class="metric">
-              <span class="metric-icon">🔥</span>
+              <span class="metric-icon">&#x1F525;</span>
               <span class="metric-value" id="home-cal">0</span>
               <span class="metric-label">kcal</span>
             </div>
           </div>
-          <div class="hint">Desliza → para más</div>
+          <div class="hint">Desliza &#x2192; para m&#xE1;s</div>
         </section>
 
         <!-- ============ PANTALLA 2: FRECUENCIA CARDIACA ============ -->
         <section class="screen" id="screen-hr">
           <h2 class="screen-title">Frecuencia cardiaca</h2>
           <div class="hr-current">
-            <span class="hr-icon">❤️</span>
+            <span class="hr-icon">&#x2764;&#xFE0F;</span>
             <span id="hr-now">72</span>
             <small>bpm</small>
           </div>
@@ -71,11 +71,11 @@
             <div class="gauge-needle" id="hr-needle"></div>
           </div>
           <div class="hr-zones">
-            <div class="zone"><span class="dot dot-green"></span><span id="hr-min">45</span> mín</div>
+            <div class="zone"><span class="dot dot-green"></span><span id="hr-min">45</span> m&#xED;n</div>
             <div class="zone"><span class="dot dot-yellow"></span> zona media</div>
-            <div class="zone"><span class="dot dot-red"></span><span id="hr-max">190</span> máx</div>
+            <div class="zone"><span class="dot dot-red"></span><span id="hr-max">190</span> m&#xE1;x</div>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
         <!-- ============ PANTALLA 3: ACTIVIDAD ============ -->
@@ -84,22 +84,22 @@
           <p class="screen-sub">Elige una actividad</p>
           <div class="activity-grid">
             <button class="activity-btn" data-activity="Caminar">
-              <span class="act-icon">🚶</span><span>Caminar</span>
+              <span class="act-icon">&#x1F6B6;</span><span>Caminar</span>
             </button>
             <button class="activity-btn" data-activity="Correr">
-              <span class="act-icon">🏃</span><span>Correr</span>
+              <span class="act-icon">&#x1F3C3;</span><span>Correr</span>
             </button>
             <button class="activity-btn" data-activity="Bicicleta">
-              <span class="act-icon">🚴</span><span>Bicicleta</span>
+              <span class="act-icon">&#x1F6B4;</span><span>Bicicleta</span>
             </button>
             <button class="activity-btn" data-activity="Entrenamiento">
-              <span class="act-icon">🏋️</span><span>Entrenamiento</span>
+              <span class="act-icon">&#x1F3CB;&#xFE0F;</span><span>Entrenamiento</span>
             </button>
           </div>
           <div class="activity-selected" id="activity-selected">
-            Seleccionada: <strong id="activity-name">—</strong>
+            Seleccionada: <strong id="activity-name">&#x2014;</strong>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
         <!-- ============ PANTALLA 4: OBJETIVO DIARIO ============ -->
@@ -127,7 +127,7 @@
               <span class="stat-value" id="goal-steps">0</span>
             </div>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
         <!-- ============ PANTALLA 5: NOTIFICACIONES ============ -->
@@ -135,44 +135,44 @@
           <h2 class="screen-title">Notificaciones</h2>
           <div class="notif-list" id="notif-list">
             <div class="notif">
-              <span class="notif-icon">🎯</span>
+              <span class="notif-icon">&#x1F3AF;</span>
               <div class="notif-body">
                 <strong>Objetivo alcanzado</strong>
-                <p>¡Completaste tu meta de pasos de hoy!</p>
+                <p>&#xA1;Completaste tu meta de pasos de hoy!</p>
                 <time>08:15</time>
               </div>
             </div>
             <div class="notif">
-              <span class="notif-icon">⏰</span>
+              <span class="notif-icon">&#x23F0;</span>
               <div class="notif-body">
                 <strong>Recordatorio de actividad</strong>
-                <p>Llevas 2 h sin moverte. ¡Estírate!</p>
+                <p>Llevas 2 h sin moverte. &#xA1;Est&#xED;rate!</p>
                 <time>11:30</time>
               </div>
             </div>
             <div class="notif">
-              <span class="notif-icon">📊</span>
+              <span class="notif-icon">&#x1F4CA;</span>
               <div class="notif-body">
                 <strong>Resumen de actividad</strong>
-                <p>8,450 pasos · 320 kcal · 42 min de ejercicio.</p>
+                <p>8,450 pasos &#xB7; 320 kcal &#xB7; 42 min de ejercicio.</p>
                 <time>18:00</time>
               </div>
             </div>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
       </div>
-      <div class="watch-button" title="Botón lateral">
-        <span class="btn-label">Atrás</span>
+      <div class="watch-button" title="Bot&#xF3;n lateral">
+        <span class="btn-label">Atr&#xE1;s</span>
       </div>
     </div>
 
-    <!-- Controles de navegación (simulan deslizado / botones) -->
+    <!-- Controles de navegaci&#xF3;n (simulan deslizado / botones) -->
     <nav class="watch-nav">
-      <button id="nav-prev" title="Pantalla anterior">◀</button>
+      <button id="nav-prev" title="Pantalla anterior">&#x25C0;</button>
       <div class="dots" id="dots"></div>
-      <button id="nav-next" title="Pantalla siguiente">▶</button>
+      <button id="nav-next" title="Pantalla siguiente">&#x25B6;</button>
     </nav>
   </main>
 

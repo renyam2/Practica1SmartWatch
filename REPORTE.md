@@ -145,6 +145,7 @@ En la TV la navegación es más "rica" (foco espacial entre muchos elementos, co
 ---
 
 ## 5. Anexos — Scripts del proyecto
+
 ### 5.1 `index.html` (Smartwatch)
 
 ```html
@@ -153,22 +154,22 @@ En la TV la navegación es más "rica" (foco espacial entre muchos elementos, co
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitLife — Smartwatch</title>
+  <title>FitLife &#x2014; Smartwatch</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="page-header">
-    <h1>FitLife · Prototipo Smartwatch</h1>
+    <h1>FitLife &#xB7; Prototipo Smartwatch</h1>
     <p>Desliza (o usa las flechas) para cambiar de pantalla. Pantalla actual:
       <span id="screen-name" class="screen-name">Inicio</span>
-      &nbsp;·&nbsp; <a href="tv/index.html">Versión Smart TV →</a>
+      &nbsp;&#xB7;&nbsp; <a href="tv/index.html">Versi&#xF3;n Smart TV &#x2192;</a>
     </p>
   </header>
 
   <main class="watch-stage">
-    <!-- Marco físico del smartwatch -->
+    <!-- Marco f&#xED;sico del smartwatch -->
     <div class="watch-body">
-      <div class="watch-crown" title="Corona (botón lateral)"></div>
+      <div class="watch-crown" title="Corona (bot&#xF3;n lateral)"></div>
       <div class="watch-screen" id="watch-screen">
 
         <!-- ============ PANTALLA 1: INICIO ============ -->
@@ -188,29 +189,29 @@ En la TV la navegación es más "rica" (foco espacial entre muchos elementos, co
           </div>
           <div class="metrics-row">
             <div class="metric">
-              <span class="metric-icon">👣</span>
+              <span class="metric-icon">&#x1F463;</span>
               <span class="metric-value" id="home-steps">0</span>
               <span class="metric-label">pasos</span>
             </div>
             <div class="metric">
-              <span class="metric-icon">❤️</span>
+              <span class="metric-icon">&#x2764;&#xFE0F;</span>
               <span class="metric-value" id="home-hr">0</span>
               <span class="metric-label">bpm</span>
             </div>
             <div class="metric">
-              <span class="metric-icon">🔥</span>
+              <span class="metric-icon">&#x1F525;</span>
               <span class="metric-value" id="home-cal">0</span>
               <span class="metric-label">kcal</span>
             </div>
           </div>
-          <div class="hint">Desliza → para más</div>
+          <div class="hint">Desliza &#x2192; para m&#xE1;s</div>
         </section>
 
         <!-- ============ PANTALLA 2: FRECUENCIA CARDIACA ============ -->
         <section class="screen" id="screen-hr">
           <h2 class="screen-title">Frecuencia cardiaca</h2>
           <div class="hr-current">
-            <span class="hr-icon">❤️</span>
+            <span class="hr-icon">&#x2764;&#xFE0F;</span>
             <span id="hr-now">72</span>
             <small>bpm</small>
           </div>
@@ -221,11 +222,11 @@ En la TV la navegación es más "rica" (foco espacial entre muchos elementos, co
             <div class="gauge-needle" id="hr-needle"></div>
           </div>
           <div class="hr-zones">
-            <div class="zone"><span class="dot dot-green"></span><span id="hr-min">45</span> mín</div>
+            <div class="zone"><span class="dot dot-green"></span><span id="hr-min">45</span> m&#xED;n</div>
             <div class="zone"><span class="dot dot-yellow"></span> zona media</div>
-            <div class="zone"><span class="dot dot-red"></span><span id="hr-max">190</span> máx</div>
+            <div class="zone"><span class="dot dot-red"></span><span id="hr-max">190</span> m&#xE1;x</div>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
         <!-- ============ PANTALLA 3: ACTIVIDAD ============ -->
@@ -234,22 +235,22 @@ En la TV la navegación es más "rica" (foco espacial entre muchos elementos, co
           <p class="screen-sub">Elige una actividad</p>
           <div class="activity-grid">
             <button class="activity-btn" data-activity="Caminar">
-              <span class="act-icon">🚶</span><span>Caminar</span>
+              <span class="act-icon">&#x1F6B6;</span><span>Caminar</span>
             </button>
             <button class="activity-btn" data-activity="Correr">
-              <span class="act-icon">🏃</span><span>Correr</span>
+              <span class="act-icon">&#x1F3C3;</span><span>Correr</span>
             </button>
             <button class="activity-btn" data-activity="Bicicleta">
-              <span class="act-icon">🚴</span><span>Bicicleta</span>
+              <span class="act-icon">&#x1F6B4;</span><span>Bicicleta</span>
             </button>
             <button class="activity-btn" data-activity="Entrenamiento">
-              <span class="act-icon">🏋️</span><span>Entrenamiento</span>
+              <span class="act-icon">&#x1F3CB;&#xFE0F;</span><span>Entrenamiento</span>
             </button>
           </div>
           <div class="activity-selected" id="activity-selected">
-            Seleccionada: <strong id="activity-name">—</strong>
+            Seleccionada: <strong id="activity-name">&#x2014;</strong>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
         <!-- ============ PANTALLA 4: OBJETIVO DIARIO ============ -->
@@ -277,7 +278,7 @@ En la TV la navegación es más "rica" (foco espacial entre muchos elementos, co
               <span class="stat-value" id="goal-steps">0</span>
             </div>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
         <!-- ============ PANTALLA 5: NOTIFICACIONES ============ -->
@@ -285,44 +286,44 @@ En la TV la navegación es más "rica" (foco espacial entre muchos elementos, co
           <h2 class="screen-title">Notificaciones</h2>
           <div class="notif-list" id="notif-list">
             <div class="notif">
-              <span class="notif-icon">🎯</span>
+              <span class="notif-icon">&#x1F3AF;</span>
               <div class="notif-body">
                 <strong>Objetivo alcanzado</strong>
-                <p>¡Completaste tu meta de pasos de hoy!</p>
+                <p>&#xA1;Completaste tu meta de pasos de hoy!</p>
                 <time>08:15</time>
               </div>
             </div>
             <div class="notif">
-              <span class="notif-icon">⏰</span>
+              <span class="notif-icon">&#x23F0;</span>
               <div class="notif-body">
                 <strong>Recordatorio de actividad</strong>
-                <p>Llevas 2 h sin moverte. ¡Estírate!</p>
+                <p>Llevas 2 h sin moverte. &#xA1;Est&#xED;rate!</p>
                 <time>11:30</time>
               </div>
             </div>
             <div class="notif">
-              <span class="notif-icon">📊</span>
+              <span class="notif-icon">&#x1F4CA;</span>
               <div class="notif-body">
                 <strong>Resumen de actividad</strong>
-                <p>8,450 pasos · 320 kcal · 42 min de ejercicio.</p>
+                <p>8,450 pasos &#xB7; 320 kcal &#xB7; 42 min de ejercicio.</p>
                 <time>18:00</time>
               </div>
             </div>
           </div>
-          <div class="hint">← desliza para volver</div>
+          <div class="hint">&#x2190; desliza para volver</div>
         </section>
 
       </div>
-      <div class="watch-button" title="Botón lateral">
-        <span class="btn-label">Atrás</span>
+      <div class="watch-button" title="Bot&#xF3;n lateral">
+        <span class="btn-label">Atr&#xE1;s</span>
       </div>
     </div>
 
-    <!-- Controles de navegación (simulan deslizado / botones) -->
+    <!-- Controles de navegaci&#xF3;n (simulan deslizado / botones) -->
     <nav class="watch-nav">
-      <button id="nav-prev" title="Pantalla anterior">◀</button>
+      <button id="nav-prev" title="Pantalla anterior">&#x25C0;</button>
       <div class="dots" id="dots"></div>
-      <button id="nav-next" title="Pantalla siguiente">▶</button>
+      <button id="nav-next" title="Pantalla siguiente">&#x25B6;</button>
     </nav>
   </main>
 
@@ -847,21 +848,21 @@ renderHR();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitLife — Smart TV</title>
+  <title>FitLife &#x2014; Smart TV</title>
   <link rel="stylesheet" href="css/tv.css">
 </head>
 <body>
   <header class="page-header">
-    <h1>FitLife · Prototipo Smart TV</h1>
+    <h1>FitLife &#xB7; Prototipo Smart TV</h1>
     <p>
       Navega con las flechas (o el control remoto en pantalla) y selecciona con
       <kbd>Enter</kbd> / <kbd>Aceptar</kbd>.
-      <a href="../index.html">← Versión Smartwatch</a>
+      <a href="../index.html">&#x2190; Versi&#xF3;n Smartwatch</a>
     </p>
   </header>
 
   <main class="tv-stage">
-    <!-- Marco físico de la TV -->
+    <!-- Marco f&#xED;sico de la TV -->
     <div class="tv-body">
       <div class="tv-screen" id="tv-screen">
 
@@ -869,35 +870,35 @@ renderHR();
         <section class="tv-screen-panel active" id="panel-dashboard">
           <div class="dash-header">
             <div class="user">
-              <span class="avatar">🧑</span>
+              <span class="avatar">&#x1F9D1;</span>
               <div>
-                <h2>María González</h2>
-                <small>Resumen diario · <span id="tv-date"></span></small>
+                <h2>Mar&#xED;a Gonz&#xE1;lez</h2>
+                <small>Resumen diario &#xB7; <span id="tv-date"></span></small>
               </div>
             </div>
             <div class="dash-goal-pill" tabindex="0" data-nav="goals">
-              Objetivo del día: <strong id="dash-goal-pct">0%</strong>
+              Objetivo del d&#xED;a: <strong id="dash-goal-pct">0%</strong>
             </div>
           </div>
 
           <div class="dash-grid">
             <div class="card" tabindex="0" data-nav="stats">
-              <span class="card-icon">👣</span>
+              <span class="card-icon">&#x1F463;</span>
               <span class="card-value" id="dash-steps">0</span>
               <span class="card-label">Pasos</span>
             </div>
             <div class="card" tabindex="0" data-nav="stats">
-              <span class="card-icon">🔥</span>
+              <span class="card-icon">&#x1F525;</span>
               <span class="card-value" id="dash-cal">0</span>
-              <span class="card-label">Calorías (kcal)</span>
+              <span class="card-label">Calor&#xED;as (kcal)</span>
             </div>
             <div class="card" tabindex="0" data-nav="stats">
-              <span class="card-icon">❤️</span>
+              <span class="card-icon">&#x2764;&#xFE0F;</span>
               <span class="card-value" id="dash-hr">0</span>
               <span class="card-label">Frecuencia cardiaca (bpm)</span>
             </div>
             <div class="card" tabindex="0" data-nav="goals">
-              <span class="card-icon">🎯</span>
+              <span class="card-icon">&#x1F3AF;</span>
               <span class="card-value" id="dash-goal">10,000</span>
               <span class="card-label">Objetivo de pasos</span>
             </div>
@@ -909,16 +910,16 @@ renderHR();
           </div>
         </section>
 
-        <!-- ============ PANTALLA 2: ESTADÍSTICAS ============ -->
+        <!-- ============ PANTALLA 2: ESTAD&#xCD;STICAS ============ -->
         <section class="tv-screen-panel" id="panel-stats">
-          <h2 class="panel-title">Estadísticas · últimos 7 días</h2>
+          <h2 class="panel-title">Estad&#xED;sticas &#xB7; &#xFA;ltimos 7 d&#xED;as</h2>
           <div class="charts">
             <div class="chart" tabindex="0">
-              <h3>Pasos por día</h3>
+              <h3>Pasos por d&#xED;a</h3>
               <div class="chart-bars" id="chart-steps"></div>
             </div>
             <div class="chart" tabindex="0">
-              <h3>Calorías por día</h3>
+              <h3>Calor&#xED;as por d&#xED;a</h3>
               <div class="chart-bars" id="chart-cal"></div>
             </div>
             <div class="chart" tabindex="0">
@@ -934,20 +935,20 @@ renderHR();
           <p class="panel-sub">Selecciona una actividad con el control remoto</p>
           <div class="activity-grid" id="activity-grid">
             <button class="tv-activity" data-activity="Caminar">
-              <span class="act-icon">🚶</span><span>Caminar</span>
+              <span class="act-icon">&#x1F6B6;</span><span>Caminar</span>
             </button>
             <button class="tv-activity" data-activity="Correr">
-              <span class="act-icon">🏃</span><span>Correr</span>
+              <span class="act-icon">&#x1F3C3;</span><span>Correr</span>
             </button>
             <button class="tv-activity" data-activity="Bicicleta">
-              <span class="act-icon">🚴</span><span>Bicicleta</span>
+              <span class="act-icon">&#x1F6B4;</span><span>Bicicleta</span>
             </button>
             <button class="tv-activity" data-activity="Entrenamiento">
-              <span class="act-icon">🏋️</span><span>Entrenamiento</span>
+              <span class="act-icon">&#x1F3CB;&#xFE0F;</span><span>Entrenamiento</span>
             </button>
           </div>
           <div class="activity-selected" id="activity-selected">
-            Seleccionada: <strong id="activity-name">—</strong>
+            Seleccionada: <strong id="activity-name">&#x2014;</strong>
           </div>
         </section>
 
@@ -957,7 +958,7 @@ renderHR();
           <div class="history-layout">
             <ul class="history-list" id="history-list"></ul>
             <aside class="history-detail" id="history-detail">
-              <p class="detail-empty">Usa ↑ ↓ para elegir una actividad y <kbd>Enter</kbd> para ver el detalle.</p>
+              <p class="detail-empty">Usa &#x2191; &#x2193; para elegir una actividad y <kbd>Enter</kbd> para ver el detalle.</p>
             </aside>
           </div>
         </section>
@@ -985,18 +986,18 @@ renderHR();
             <div class="goal-block" tabindex="0">
               <h3>Objetivos alcanzados</h3>
               <ul class="achieved-list">
-                <li>🏅 Meta de pasos completada 5 veces este mes</li>
-                <li>🔥 300 kcal quemadas en una sesión</li>
-                <li>⏱️ 60 min de ejercicio continuo</li>
+                <li>&#x1F3C5; Meta de pasos completada 5 veces este mes</li>
+                <li>&#x1F525; 300 kcal quemadas en una sesi&#xF3;n</li>
+                <li>&#x23F1;&#xFE0F; 60 min de ejercicio continuo</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <!-- Barra de navegación inferior (secciones) -->
+        <!-- Barra de navegaci&#xF3;n inferior (secciones) -->
         <nav class="tv-tabbar" id="tabbar">
           <button data-panel="dashboard">Inicio</button>
-          <button data-panel="stats">Estadísticas</button>
+          <button data-panel="stats">Estad&#xED;sticas</button>
           <button data-panel="activities">Actividades</button>
           <button data-panel="history">Historial</button>
           <button data-panel="goals">Objetivos</button>
@@ -1007,12 +1008,12 @@ renderHR();
 
     <!-- Control remoto en pantalla -->
     <div class="remote" title="Control remoto">
-      <button class="r-btn r-up" data-dir="up">▲</button>
-      <button class="r-btn r-left" data-dir="left">◀</button>
+      <button class="r-btn r-up" data-dir="up">&#x25B2;</button>
+      <button class="r-btn r-left" data-dir="left">&#x25C0;</button>
       <button class="r-btn r-ok" data-dir="ok">OK</button>
-      <button class="r-btn r-right" data-dir="right">▶</button>
-      <button class="r-btn r-down" data-dir="down">▼</button>
-      <button class="r-btn r-back" data-dir="back">⌂ Inicio</button>
+      <button class="r-btn r-right" data-dir="right">&#x25B6;</button>
+      <button class="r-btn r-down" data-dir="down">&#x25BC;</button>
+      <button class="r-btn r-back" data-dir="back">&#x2302; Inicio</button>
     </div>
   </main>
 
@@ -1441,13 +1442,13 @@ const week = [
 ];
 
 const history = [
-  { date: "Hoy, 18:00", activity: "Correr",        icon: "🏃", duration: "42 min", steps: 4200, cal: 320, hr: 148 },
-  { date: "Hoy, 07:30", activity: "Caminar",       icon: "🚶", duration: "30 min", steps: 3100, cal: 140, hr: 92 },
-  { date: "Ayer, 19:15", activity: "Bicicleta",    icon: "🚴", duration: "55 min", steps: 2800, cal: 380, hr: 132 },
-  { date: "Ayer, 08:00", activity: "Entrenamiento",icon: "🏋️", duration: "40 min", steps: 900,  cal: 290, hr: 155 },
-  { date: "Mié, 18:30", activity: "Correr",        icon: "🏃", duration: "55 min", steps: 5600, cal: 430, hr: 158 },
-  { date: "Mié, 07:00", activity: "Caminar",       icon: "🚶", duration: "25 min", steps: 2400, cal: 110, hr: 88 },
-  { date: "Mar, 19:00", activity: "Bicicleta",    icon: "🚴", duration: "30 min", steps: 1500, cal: 210, hr: 120 },
+  { date: "Hoy, 18:00", activity: "Correr",        icon: "\u1F3C3", duration: "42 min", steps: 4200, cal: 320, hr: 148 },
+  { date: "Hoy, 07:30", activity: "Caminar",       icon: "\u1F6B6", duration: "30 min", steps: 3100, cal: 140, hr: 92 },
+  { date: "Ayer, 19:15", activity: "Bicicleta",    icon: "\u1F6B4", duration: "55 min", steps: 2800, cal: 380, hr: 132 },
+  { date: "Ayer, 08:00", activity: "Entrenamiento",icon: "\u1F3CB\uFE0F", duration: "40 min", steps: 900,  cal: 290, hr: 155 },
+  { date: "Mié, 18:30", activity: "Correr",        icon: "\u1F3C3", duration: "55 min", steps: 5600, cal: 430, hr: 158 },
+  { date: "Mié, 07:00", activity: "Caminar",       icon: "\u1F6B6", duration: "25 min", steps: 2400, cal: 110, hr: 88 },
+  { date: "Mar, 19:00", activity: "Bicicleta",    icon: "\u1F6B4", duration: "30 min", steps: 1500, cal: 210, hr: 120 },
 ];
 
 const goals = {

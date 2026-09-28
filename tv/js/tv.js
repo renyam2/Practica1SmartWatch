@@ -20,13 +20,13 @@ const week = [
 ];
 
 const history = [
-  { date: "Hoy, 18:00", activity: "Correr",        icon: "🏃", duration: "42 min", steps: 4200, cal: 320, hr: 148 },
-  { date: "Hoy, 07:30", activity: "Caminar",       icon: "🚶", duration: "30 min", steps: 3100, cal: 140, hr: 92 },
-  { date: "Ayer, 19:15", activity: "Bicicleta",    icon: "🚴", duration: "55 min", steps: 2800, cal: 380, hr: 132 },
-  { date: "Ayer, 08:00", activity: "Entrenamiento",icon: "🏋️", duration: "40 min", steps: 900,  cal: 290, hr: 155 },
-  { date: "Mié, 18:30", activity: "Correr",        icon: "🏃", duration: "55 min", steps: 5600, cal: 430, hr: 158 },
-  { date: "Mié, 07:00", activity: "Caminar",       icon: "🚶", duration: "25 min", steps: 2400, cal: 110, hr: 88 },
-  { date: "Mar, 19:00", activity: "Bicicleta",    icon: "🚴", duration: "30 min", steps: 1500, cal: 210, hr: 120 },
+  { date: "Hoy, 18:00", activity: "Correr",        icon: "\u1F3C3", duration: "42 min", steps: 4200, cal: 320, hr: 148 },
+  { date: "Hoy, 07:30", activity: "Caminar",       icon: "\u1F6B6", duration: "30 min", steps: 3100, cal: 140, hr: 92 },
+  { date: "Ayer, 19:15", activity: "Bicicleta",    icon: "\u1F6B4", duration: "55 min", steps: 2800, cal: 380, hr: 132 },
+  { date: "Ayer, 08:00", activity: "Entrenamiento",icon: "\u1F3CB\uFE0F", duration: "40 min", steps: 900,  cal: 290, hr: 155 },
+  { date: "Mié, 18:30", activity: "Correr",        icon: "\u1F3C3", duration: "55 min", steps: 5600, cal: 430, hr: 158 },
+  { date: "Mié, 07:00", activity: "Caminar",       icon: "\u1F6B6", duration: "25 min", steps: 2400, cal: 110, hr: 88 },
+  { date: "Mar, 19:00", activity: "Bicicleta",    icon: "\u1F6B4", duration: "30 min", steps: 1500, cal: 210, hr: 120 },
 ];
 
 const goals = {
