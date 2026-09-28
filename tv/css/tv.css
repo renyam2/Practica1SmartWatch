@@ -1,0 +1,390 @@
+/* ============================================================
+   FitLife — Smart TV
+   Diseño adaptado a pantalla grande y control remoto:
+   - navegación por FOCO (elemento resaltado), no por cursor
+   - botones direccionales + botón Aceptar (Enter)
+   - tipografía grande legible a distancia (10-2 m)
+   - layout amplio: varias métricas visibles a la vez
+   ============================================================ */
+
+:root {
+  --bg: #10141c;
+  --screen-bg: #0a0e14;
+  --text: #eef2f8;
+  --text-dim: #98a3b5;
+  --accent: #4f9cf7;
+  --green: #34d399;
+  --yellow: #fbbf24;
+  --red: #f87171;
+  --card: rgba(255, 255, 255, 0.06);
+  --focus: #ffd54f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header { text-align: center; padding: 20px 16px 8px; }
+.page-header h1 { font-size: 1.3rem; }
+.page-header p { color: var(--text-dim); font-size: 0.95rem; margin-top: 4px; }
+.page-header a { color: var(--accent); text-decoration: none; }
+
+kbd {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.85em;
+}
+
+/* ---------- Marco físico de la TV ---------- */
+.tv-stage {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  padding: 12px 16px 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tv-body {
+  background: #1b2029;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.6);
+}
+.tv-bezel {
+  height: 10px;
+  background: #2a3140;
+  border-radius: 0 0 10px 10px;
+}
+
+.tv-screen {
+  width: min(960px, 92vw);
+  aspect-ratio: 16 / 9;
+  background: var(--screen-bg);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #2a3140;
+}
+
+/* ---------- Paneles ---------- */
+.tv-screen-panel {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  padding: 28px 34px 70px;
+  gap: 14px;
+}
+.tv-screen-panel.active { display: flex; }
+
+.panel-title { font-size: 1.5rem; font-weight: 700; }
+.panel-sub { color: var(--text-dim); font-size: 0.95rem; }
+
+/* ---------- Sistema de FOCO (control remoto) ---------- */
+[tabindex="0"] { outline: none; }
+
+.focused {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  background: rgba(255, 213, 79, 0.10) !important;
+  transform: scale(1.03);
+  transition: transform 0.12s ease;
+}
+
+/* ---------- PANTALLA 1: Dashboard ---------- */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user { display: flex; align-items: center; gap: 12px; }
+.avatar { font-size: 2.2rem; }
+.user h2 { font-size: 1.35rem; }
+.user small { color: var(--text-dim); }
+
+.dash-goal-pill {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.dash-goal-pill strong { color: var(--green); }
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 18px 10px;
+  cursor: pointer;
+}
+.card-icon { font-size: 1.8rem; }
+.card-value { font-size: 1.9rem; font-weight: 700; }
+.card-label { font-size: 0.85rem; color: var(--text-dim); }
+
+.dash-recent {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  flex: 1;
+}
+.dash-recent h3 { font-size: 1.05rem; margin-bottom: 8px; }
+.dash-recent ul { list-style: none; }
+.dash-recent li {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.dash-recent li:last-child { border-bottom: none; }
+
+/* ---------- PANTALLA 2: Estadísticas ---------- */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  flex: 1;
+}
+.chart {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.chart h3 { font-size: 1rem; margin-bottom: 12px; }
+
+.chart-bars {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+  text-align: center;
+}
+.bar-fill {
+  background: var(--accent);
+  border-radius: 6px 6px 0 0;
+  min-height: 4px;
+}
+.chart-cal .bar-fill { background: var(--yellow); }
+.chart-time .bar-fill { background: var(--green); }
+.bar-val { font-size: 0.75rem; color: var(--text-dim); }
+.bar-day { font-size: 0.75rem; color: var(--text-dim); }
+
+/* ---------- PANTALLA 3: Actividades ---------- */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  flex: 1;
+  align-content: center;
+}
+.tv-activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 28px 12px;
+  cursor: pointer;
+}
+.act-icon { font-size: 2.6rem; }
+.tv-activity.selected {
+  border-color: var(--accent);
+  background: rgba(79, 156, 247, 0.18);
+}
+
+.activity-selected {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-dim);
+}
+.activity-selected strong { color: var(--accent); }
+
+/* ---------- PANTALLA 4: Historial ---------- */
+.history-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+}
+.history-list {
+  list-style: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.history-item .h-date { color: var(--text-dim); font-size: 0.85rem; }
+
+.history-detail {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detail-empty { color: var(--text-dim); }
+.history-detail h3 { font-size: 1.2rem; }
+.detail-row { display: flex; justify-content: space-between; font-size: 1rem; }
+.detail-row span:first-child { color: var(--text-dim); }
+.detail-row span:last-child { font-weight: 700; }
+
+/* ---------- PANTALLA 5: Objetivos ---------- */
+.goals-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  flex: 1;
+}
+.goal-block {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 18px;
+  cursor: pointer;
+}
+.goal-block h3 { font-size: 1.1rem; margin-bottom: 12px; }
+.goal-block p { color: var(--text-dim); margin-top: 8px; }
+
+.progress {
+  position: relative;
+  height: 18px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.progress-bar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: var(--green);
+  border-radius: 9px;
+  transition: width 0.6s ease;
+}
+.progress-bar.weekly { background: var(--accent); }
+.progress-text {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.achieved-list { list-style: none; }
+.achieved-list li {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.achieved-list li:last-child { border-bottom: none; }
+
+/* ---------- Barra de pestañas (secciones) ---------- */
+.tv-tabbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 8px;
+  padding: 12px 34px;
+  background: rgba(0,0,0,0.55);
+}
+.tv-tabbar button {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text-dim);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 6px;
+  cursor: pointer;
+}
+.tv-tabbar button.current {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(79,156,247,0.15);
+}
+
+/* ---------- Control remoto ---------- */
+.remote {
+  display: grid;
+  grid-template-columns: repeat(3, 64px);
+  grid-template-rows: repeat(3, 64px);
+  gap: 10px;
+  background: #1b2029;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.r-up    { grid-column: 2; grid-row: 1; }
+.r-left  { grid-column: 1; grid-row: 2; }
+.r-ok    { grid-column: 2; grid-row: 2; }
+.r-right { grid-column: 3; grid-row: 2; }
+.r-down  { grid-column: 2; grid-row: 3; }
+.r-back  { grid-column: 1 / 4; grid-row: 3; }
+
+.r-btn {
+  background: #2a3140;
+  border: none;
+  border-radius: 50%;
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.r-btn:active { background: #3a4356; }
+.r-ok { background: var(--accent); font-weight: 700; }
+.r-back { border-radius: 12px; font-size: 0.95rem; }
